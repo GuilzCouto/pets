@@ -11,7 +11,7 @@ export function useIndex(){
       [mensagem, setMensagem] = useState('')
 
     useEffect(()=>{
-        ApiService.get('/pets')
+        ApiService.get('/pets/')
             .then((resposta) =>{
                 setListaPets(resposta.data);
             })
