@@ -2,7 +2,7 @@ import type { NextPage } from 'next'
 import List from '../ui/components/list/list'
 import Title from '../ui/components/title/title'
 import { Dialog, TextField, Grid, DialogActions, Button, Snackbar } from '@mui/material'
-import { useIndex } from '../data/hooks/pages/useindex'
+import { useIndex } from '../data/hooks/pages/useIndex'
 
 const Home: NextPage = () => {
   const {listaPets, petSelecionado, setPetSelecionado, email, setEmail, valor, setValor, mensagem, setMensagem, adotar} = useIndex();
@@ -35,7 +35,7 @@ const Home: NextPage = () => {
           <Button variant="contained" onClick={()=> adotar()}>Confirmar Adoção</Button>
         </DialogActions>
       </Dialog>
-      <Snackbar open={mensagem.length >0} message={mensagem} autoHideDuration={2500} onClose={()=> setMensagem('')}/>
+      <Snackbar open={mensagem.length>0} message={mensagem} autoHideDuration={2500} onClose={()=> setMensagem('')}/>
     </div>
   )
 }
